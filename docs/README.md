@@ -21,5 +21,5 @@ end
 ---
 
 [100]: https://flutter.cn/docs/get-started/install
-[101]: /base/11_beginner/run_the_first_project.md
+[101]: ../docs/base/11_beginner/run_the_first_project.md
 [102]: todo
