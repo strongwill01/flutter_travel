@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "flutter_travel",
+            "request": "launch",
+            "type": "dart",
+            // "deviceId": "MP528DL100012" // 学习机
+            "deviceId": "7HX5T19A05002680"
+            // "deviceId": "chrome"
+            // "deviceId": "macos"
+        },
+        {
+            "name": "flutter_travel (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "flutter_travel (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
