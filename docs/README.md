@@ -6,7 +6,7 @@
 - [x] [开发初体验][101]，[HelloWorld][102]
 
 - [ ] base
-  - [ ] Introduction
+  - [ ] [Introduction][103]
   - [ ] quick start
   - [ ] widgets
   - [ ] events
@@ -36,3 +36,4 @@ end
 [100]: https://flutter.cn/docs/get-started/install
 [101]: ../docs/base/11_beginner/run_the_first_project.md
 [102]: todo
+[103]: ./base/10_introduction
