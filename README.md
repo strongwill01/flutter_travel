@@ -29,8 +29,11 @@ Tools • Dart 2.17.1 • DevTools 2.12.2
 - [x] Android
 - [x] IOS
 - [x] WEB
-- [ ] Windows
+- [ ] Windowsa
 - [ ] Linux
+
+## Visual Studio Code Config
+[VS Code Editor](https://code.visualstudio.com/docs/editor/debugging#_launch-configurations)
 
 ## Getting Started
 
