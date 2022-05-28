@@ -1,6 +1,6 @@
 # flutter_travel<img src="./docs/logos/flutter-lockup.png" width=90 height=30/>
 
-A new Flutter project, Version 3.0.1 is used.
+A new Flutter project, Version `3.0.1` is used.
 
 <div align="center">
 <img src="./docs/logos/flutter3_hero.png" width=600 height=326/>
@@ -10,7 +10,7 @@ A new Flutter project, Version 3.0.1 is used.
 [docs](/docs)
 
 ## Flutter.dev&docs
-[flutter.io, flutter.dev](https://flutter.dev/)
+[flutter.io, flutter.dev](https://flutter.dev/)  
 [docs.flutter.dev](https://docs.flutter.dev/)
 
 ## Version Flutter 3.0.1
