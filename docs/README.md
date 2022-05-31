@@ -2,7 +2,7 @@
 
 ## Flutter,Dart
 
-- [ ] base
+- [ ] $base
   - [x] [Introduction][101]
   - [x] [quick start][102]
   - [ ] [widgets][103]
@@ -14,17 +14,28 @@
   - [ ] [plugin and hybrid][109]
 
 
-- [ ] debugging_testing
-  - [ ] 调试工具
+- [ ] $debugging_testing
+  - [ ] debug
+    - [ ] [debug tools][401]
+    - [ ] [error handler][402]
+    - [ ] [reporting][403]
+  - [ ] test
+    - [ ] [Continuous integration][451]
+  
+- [ ] $performance optimization【todo】
 
-- [ ] performance optimization
-- [ ] deployment
+
+- [ ] $deployment
+  - [ ] [build and realease an macOS app][501]
+  - [ ] [build and realease an Windows app][502]
   - [ ] confuse code
+  - [ ] [Continuous deployment](https://docs.flutter.dev/deployment/cd)【todo】
 
-- [x] [flutter_command-line][301]
+- [ ]  $todo
 
+- [x] $[flutter_command-line][301]
 
-- [ ] [problem_solving_list][201]
+- [ ] $[problem_solving_list][201]
 
 
 ## Platform
@@ -52,3 +63,8 @@ end
 [201]: ./problem_solving_list.md
 
 [301]: ./flutter_command-line.md
+
+[402]: ./debugging_testing/error_handler.md
+
+[501]: ./deployment/build_and_realease_an_macOS_app.md
+[502]: ./deployment/build_and_realeas_an_Windows_app.md

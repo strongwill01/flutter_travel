@@ -8,10 +8,13 @@
             "name": "flutter_travel",
             "request": "launch",
             "type": "dart",
+            // "flutterMode": "profile",
+            // "flutterPlatform": "android-arm64",
             // "deviceId": "MP528DL100012" // 学习机
-            "deviceId": "7HX5T19A05002680"
+            // "deviceId": "7HX5T19A05002680" // mobile
             // "deviceId": "chrome"
-            // "deviceId": "macos"
+            "deviceId": "macos"
+            // "deviceId": "window"
         },
         {
             "name": "flutter_travel (profile mode)",
