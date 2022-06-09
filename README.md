@@ -6,6 +6,13 @@ A new Flutter project, Version `3.0.1` is used.
 <img src="./docs/logos/flutter3_hero.png" width=600 height=326/>
 </div>
 
+```
+$ /flutter
+$ /flutter/bin/cache/dart-sdk
+Flutter 3.0.1 • channel stable • https://github.com/flutter/flutter.git
+Tools • Dart 2.17.1 • DevTools 2.12.2
+```
+
 ## Travel Docs
 [docs](/docs)
 
@@ -32,8 +39,10 @@ Tools • Dart 2.17.1 • DevTools 2.12.2
 - [ ] Windowsa
 - [ ] Linux
 
-## Visual Studio Code Config
-[VS Code Editor](https://code.visualstudio.com/docs/editor/debugging#_launch-configurations)
+## Visual Studio Code 
+Config：[VS Code Editor](https://code.visualstudio.com/docs/editor/debugging#_launch-configurations)
+
+## Android Studio
 
 ## Getting Started
 

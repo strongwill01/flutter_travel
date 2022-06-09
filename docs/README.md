@@ -19,11 +19,9 @@
     - [ ] [debug tools][401]
     - [ ] [error handler][402]
     - [ ] [reporting][403]
+    - [ ] [build_modes][404]
   - [ ] test
     - [ ] [Continuous integration][451]
-  
-- [ ] $performance optimization【todo】
-
 
 - [ ] $deployment
   - [ ] [build and realease an macOS app][501]
@@ -31,7 +29,9 @@
   - [ ] confuse code
   - [ ] [Continuous deployment](https://docs.flutter.dev/deployment/cd)【todo】
 
-- [ ]  $todo
+- [ ] $performance optimization
+
+- [ ]  $Flutter Architecture
 
 - [x] $[flutter_command-line][301]
 
@@ -40,10 +40,12 @@
 
 ## Platform
 
-- [ ] Swift?
 
 ## Source analysis
 
+
+## Other
+- [ ] todo
 
 ---
 end
@@ -65,6 +67,7 @@ end
 [301]: ./flutter_command-line.md
 
 [402]: ./debugging_testing/error_handler.md
+[404]: ./debugging_testing/build_modes.md
 
 [501]: ./deployment/build_and_realease_an_macOS_app.md
 [502]: ./deployment/build_and_realeas_an_Windows_app.md

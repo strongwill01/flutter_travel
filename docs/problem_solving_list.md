@@ -1,5 +1,13 @@
 
 
+### 9、编译时报错：The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+
+[solution] 
+```
+1、$ cd macos/ 【or ios/】
+2、$ pod install
+3、然后运行工程即可
+```
 
 ### 8、clone项目时报错 fatal: unable to access : error:1407742E:SSL routines:SSL23_GET_SERVER_HELLO:tlsv1 alert protocol version
 
