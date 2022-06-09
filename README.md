@@ -36,7 +36,7 @@ Tools • Dart 2.17.1 • DevTools 2.12.2
 - [x] Android
 - [x] IOS
 - [x] WEB
-- [ ] Windowsa
+- [ ] Windows
 - [ ] Linux
 
 ## Visual Studio Code 
