@@ -44,6 +44,9 @@ Config：[VS Code Editor](https://code.visualstudio.com/docs/editor/debugging#_l
 
 ## Android Studio
 
+## Emacs
+[Emacs](https://www.gnu.org/software/emacs/download.html)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
