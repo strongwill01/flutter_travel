@@ -29,9 +29,15 @@
   - [ ] confuse code
   - [ ] [Continuous deployment](https://docs.flutter.dev/deployment/cd)【todo】
 
-- [ ] $performance optimization
 
 - [ ]  $Flutter Architecture
+
+- [ ]  $For Desktop
+	- [ ]  cupertino
+	- [ ]  macos_ui
+	- [ ]  fluent_ui for windows
+
+- [ ] $Performance optimization
 
 - [x] $[flutter_command-line][301]
 

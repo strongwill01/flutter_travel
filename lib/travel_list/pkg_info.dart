@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
+/**
+ * 应用信息
+ * 
+ * todo：
+ *  1、弹窗显示
+ *  2、增加背景，logo
+ */
 class PkgInfos extends StatefulWidget {
   PkgInfos({Key? key, required this.title}) : super(key: key);
 
@@ -37,7 +44,10 @@ class _PkgInfosState extends State<PkgInfos> {
               widget.title!, // todo
             )),
         body: Center(
-          child: Column(
+          child: Wrap(
+            // direction: Axis.vertical,
+            // verticalDirection: VerticalDirection.up,
+            spacing: 10.0,
             children: [
               _infoTile('App Name:', _pkgInfoData.appName),
               _infoTile('Package Name:', _pkgInfoData.packageName),

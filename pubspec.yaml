@@ -37,9 +37,17 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   # url_launcher: ^6.1.2
+  # path_provider: ^
   # https://pub.dev/packages/provider
   provider: ^6.0.3
+
+  # 应用信息
   package_info_plus: ^1.4.2
+
+  # 这个不好用，macos上不能实时切换大小
+  # desktop_window: ^0.4.0
+  # 改变窗口大小
+  window_manager: ^0.2.5
 
 dev_dependencies:
   flutter_test:

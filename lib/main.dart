@@ -1,13 +1,54 @@
+import 'dart:io';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_travel/travel_list/login.dart';
+import 'package:window_manager/window_manager.dart';
 import 'travel_list/pkg_info.dart';
 
 void main() {
-  runApp(const MyApp());
+  changeScreenSize(800, 600);
+
+  runApp(MaterialApp(
+    title: 'main',
+    home: const MyApp(),
+  ));
   // runApp(LoginPage());
   // runApp(PkgInfos(
   //   title: 'package info',
   // ));
+}
+
+Future changeScreenSize(double width, double height) async {
+  if (kIsWeb) {
+    return;
+  }
+
+  if (Platform.isMacOS || Platform.isWindows || Platform.isLinux) {}
+
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // 1、desktop_window
+  // await DesktopWindow.setFullScreen(true);
+  // if (Platform.isMacOS || Platform.isWindows || Platform.isLinux) {
+  //   await DesktopWindow.setWindowSize(const Size(700, 500));
+  //   // await DesktopWindow.setMinWindowSize(const Size(300, 200));
+  //   // await DesktopWindow.setMaxWindowSize(const Size(1200, 800));
+  // }
+
+// 2、window_manager
+  await windowManager.ensureInitialized();
+  WindowOptions windowOptions = WindowOptions(
+    size: Size(width, height),
+    center: true,
+    skipTaskbar: true,
+    fullScreen: false,
+    maximumSize: Size(1000, 800),
+  );
+  windowManager.waitUntilReadyToShow(windowOptions, () async {
+    await windowManager.show();
+    await windowManager.focus();
+  });
 }
 
 class MyApp extends StatelessWidget {
@@ -62,6 +103,14 @@ class MyApp extends StatelessWidget {
                       },
                     ));
                     break;
+                  case 'message':
+                    print('message...');
+                    changeScreenSize(300, 450);
+                    // () async {
+                    //   WidgetsFlutterBinding.ensureInitialized();
+                    //   await DesktopWindow.setWindowSize(Size(100, 300));
+                    // };
+                    break;
                   default:
                   // do nothing
                 }
@@ -88,6 +137,11 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
 
   void _incrementCounter() {
     setState(() {
