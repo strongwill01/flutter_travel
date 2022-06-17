@@ -45,13 +45,13 @@
 
 
 ## Platform
-
+- [  ] package & plugin package
 
 ## Source analysis
 
 
 ## Other
-- [ ] todo
+- [ ] Electron, Flutter
 
 ---
 end

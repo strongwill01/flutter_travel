@@ -49,6 +49,14 @@ dependencies:
   # 改变窗口大小
   window_manager: ^0.2.5
 
+  # webview_flutter: ^3.0.4
+
+  # todo: Unhandled Exception: MissingPluginException(No implementation found for method ensureInitialized on channel window_manager)
+  # desktop_webview_window: ^0.1.6
+
+# https://pub.dev/packages/webview_windows
+  # webview_windows: ^0.2.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -75,6 +83,9 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+
+assets:
+    - images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -1,5 +1,67 @@
 
 
+### 10、新增package(desktop_webview_window)，运行时报错：CocoaPods could not find compatible versions for pod "desktop_webview_window":
+
+```
+Launching lib/main.dart on macOS in debug mode...
+CocoaPods' output:
+↳
+      Preparing
+    Analyzing dependencies
+    Inspecting targets to integrate
+      Using `ARCHS` setting to build architectures of target `Pods-Runner`: (``)
+    Finding Podfile changes
+      A desktop_webview_window
+      - FlutterMacOS
+      - package_info_plus_macos
+      - screen_retriever
+      - window_manager
+    Fetching external sources
+    -> Fetching podspec for `FlutterMacOS` from `Flutter/ephemeral`
+    -> Fetching podspec for `desktop_webview_window` from `Flutter/ephemeral/.symlinks/plugins/desktop_webview_window/macos`
+    -> Fetching podspec for `package_info_plus_macos` from `Flutter/ephemeral/.symlinks/plugins/package_info_plus_macos/macos`
+    -> Fetching podspec for `screen_retriever` from `Flutter/ephemeral/.symlinks/plugins/screen_retriever/macos`
+    -> Fetching podspec for `window_manager` from `Flutter/ephemeral/.symlinks/plugins/window_manager/macos`
+    Resolving dependencies of `Podfile`
+      CDN: trunk Relative path: CocoaPods-version.yml exists! Returning local because checking is only performed in repo update
+    [!] CocoaPods could not find compatible versions for pod "desktop_webview_window":
+      In Podfile:
+        desktop_webview_window (from `Flutter/ephemeral/.symlinks/plugins/desktop_webview_window/macos`)
+    Specs satisfying the `desktop_webview_window (from `Flutter/ephemeral/.symlinks/plugins/desktop_webview_window/macos`)` dependency were found, but they required a higher minimum deployment target.
+    /Library/Ruby/Gems/2.6.0/gems/molinillo-0.8.0/lib/molinillo/resolution.rb:317:in `raise_error_unless_state'
+    /Library/Ruby/Gems/2.6.0/gems/molinillo-0.8.0/lib/molinillo/resolution.rb:299:in `block in unwind_for_conflict'
+    /Library/Ruby/Gems/2.6.0/gems/molinillo-0.8.0/lib/molinillo/resolution.rb:297:in `tap'
+    /Library/Ruby/Gems/2.6.0/gems/molinillo-0.8.0/lib/molinillo/resolution.rb:297:in `unwind_for_conflict'
+    /Library/Ruby/Gems/2.6.0/gems/molinillo-0.8.0/lib/molinillo/resolution.rb:682:in `attempt_to_activate'
+    /Library/Ruby/Gems/2.6.0/gems/molinillo-0.8.0/lib/molinillo/resolution.rb:254:in `process_topmost_state'
+    /Library/Ruby/Gems/2.6.0/gems/molinillo-0.8.0/lib/molinillo/resolution.rb:182:in `resolve'
+    /Library/Ruby/Gems/2.6.0/gems/molinillo-0.8.0/lib/molinillo/resolver.rb:43:in `resolve'
+    /Library/Ruby/Gems/2.6.0/gems/cocoapods-1.11.3/lib/cocoapods/resolver.rb:94:in `resolve'
+    /Library/Ruby/Gems/2.6.0/gems/cocoapods-1.11.3/lib/cocoapods/installer/analyzer.rb:1078:in `block in resolve_dependencies'
+    /Library/Ruby/Gems/2.6.0/gems/cocoapods-1.11.3/lib/cocoapods/user_interface.rb:64:in `section'
+    /Library/Ruby/Gems/2.6.0/gems/cocoapods-1.11.3/lib/cocoapods/installer/analyzer.rb:1076:in `resolve_dependencies'
+    /Library/Ruby/Gems/2.6.0/gems/cocoapods-1.11.3/lib/cocoapods/installer/analyzer.rb:124:in `analyze'
+    /Library/Ruby/Gems/2.6.0/gems/cocoapods-1.11.3/lib/cocoapods/installer.rb:416:in `analyze'
+    /Library/Ruby/Gems/2.6.0/gems/cocoapods-1.11.3/lib/cocoapods/installer.rb:241:in `block in resolve_dependencies'
+    /Library/Ruby/Gems/2.6.0/gems/cocoapods-1.11.3/lib/cocoapods/user_interface.rb:64:in `section'
+    /Library/Ruby/Gems/2.6.0/gems/cocoapods-1.11.3/lib/cocoapods/installer.rb:240:in `resolve_dependencies'
+    /Library/Ruby/Gems/2.6.0/gems/cocoapods-1.11.3/lib/cocoapods/installer.rb:161:in `install!'
+    /Library/Ruby/Gems/2.6.0/gems/cocoapods-1.11.3/lib/cocoapods/command/install.rb:52:in `run'
+    /Library/Ruby/Gems/2.6.0/gems/claide-1.1.0/lib/claide/command.rb:334:in `run'
+    /Library/Ruby/Gems/2.6.0/gems/cocoapods-1.11.3/lib/cocoapods/command.rb:52:in `run'
+    /Library/Ruby/Gems/2.6.0/gems/cocoapods-1.11.3/bin/pod:55:in `<top (required)>'
+    /usr/local/bin/pod:23:in `load'
+    /usr/local/bin/pod:23:in `<main>'
+Error output from CocoaPods:
+↳
+    /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/universal-darwin21/rbconfig.rb:230: warning: Insecure world writable dir /Users/lyl/techWorks in PATH, mode 040777
+Exception: Error running pod install
+Exited
+
+```
+[solution] 
+/macos/Podfile中修改下deployment Target，`platform :osx, '10.12'`
+
 ### 9、编译时报错：The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
 
 [solution] 

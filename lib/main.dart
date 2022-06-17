@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:desktop_webview_window/desktop_webview_window.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_travel/travel_list/login.dart';
@@ -7,7 +8,9 @@ import 'package:window_manager/window_manager.dart';
 import 'travel_list/pkg_info.dart';
 
 void main() {
-  changeScreenSize(800, 600);
+  // changeScreenSize(800, 600);
+  WidgetsFlutterBinding.ensureInitialized();
+// getApplicationDocumentsDirectory
 
   runApp(MaterialApp(
     title: 'main',
@@ -39,12 +42,12 @@ Future changeScreenSize(double width, double height) async {
 // 2、window_manager
   await windowManager.ensureInitialized();
   WindowOptions windowOptions = WindowOptions(
-    size: Size(width, height),
-    center: true,
-    skipTaskbar: true,
-    fullScreen: false,
-    maximumSize: Size(1000, 800),
-  );
+      size: Size(width, height),
+      center: true,
+      skipTaskbar: true,
+      fullScreen: false,
+      maximumSize: const Size(1000, 800),
+      minimumSize: const Size(300, 400));
   windowManager.waitUntilReadyToShow(windowOptions, () async {
     await windowManager.show();
     await windowManager.focus();
@@ -118,9 +121,16 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),
-        body: Container(
-          color: Colors.amber[100],
-        ),
+        // body: IconButton(
+        //   icon: const Icon(Icons.favorite),
+        //   onPressed: () async {
+        //     Webview webview = await WebviewWindow.create(
+        //         configuration: CreateConfiguration(title: "webview page"));
+
+        //     webview.launch("https://www.baidu.com");
+        //   },
+        // ),
+        body: Container(),
       ),
     );
   }
