@@ -1,6 +1,4 @@
 PODS:
-  - desktop_webview_window (0.0.1):
-    - FlutterMacOS
   - FlutterMacOS (1.0.0)
   - package_info_plus_macos (0.0.1):
     - FlutterMacOS
@@ -10,15 +8,12 @@ PODS:
     - FlutterMacOS
 
 DEPENDENCIES:
-  - desktop_webview_window (from `Flutter/ephemeral/.symlinks/plugins/desktop_webview_window/macos`)
   - FlutterMacOS (from `Flutter/ephemeral`)
   - package_info_plus_macos (from `Flutter/ephemeral/.symlinks/plugins/package_info_plus_macos/macos`)
   - screen_retriever (from `Flutter/ephemeral/.symlinks/plugins/screen_retriever/macos`)
   - window_manager (from `Flutter/ephemeral/.symlinks/plugins/window_manager/macos`)
 
 EXTERNAL SOURCES:
-  desktop_webview_window:
-    :path: Flutter/ephemeral/.symlinks/plugins/desktop_webview_window/macos
   FlutterMacOS:
     :path: Flutter/ephemeral
   package_info_plus_macos:
@@ -29,7 +24,6 @@ EXTERNAL SOURCES:
     :path: Flutter/ephemeral/.symlinks/plugins/window_manager/macos
 
 SPEC CHECKSUMS:
-  desktop_webview_window: d4365e71bcd4e1aa0c14cf0377aa24db0c16a7e2
   FlutterMacOS: 57701585bf7de1b3fc2bb61f6378d73bbdea8424
   package_info_plus_macos: f010621b07802a241d96d01876d6705f15e77c1c
   screen_retriever: 59634572a57080243dd1bf715e55b6c54f241a38
