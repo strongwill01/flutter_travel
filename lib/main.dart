@@ -7,8 +7,7 @@ import 'package:window_manager/window_manager.dart';
 import 'travel_list/pkg_info.dart';
 
 void main() {
-  // changeScreenSize(800, 600);
-  WidgetsFlutterBinding.ensureInitialized();
+  changeScreenSize(800, 600);
 // getApplicationDocumentsDirectory
 
   runApp(MaterialApp(
@@ -22,35 +21,35 @@ void main() {
 }
 
 Future changeScreenSize(double width, double height) async {
-  if (kIsWeb) {
+  if (kIsWeb || Platform.isIOS || Platform.isAndroid) {
     return;
   }
 
-  if (Platform.isMacOS || Platform.isWindows || Platform.isLinux) {}
+  if (Platform.isMacOS || Platform.isWindows || Platform.isLinux) {
+    WidgetsFlutterBinding.ensureInitialized();
 
-  WidgetsFlutterBinding.ensureInitialized();
-
-  // 1、desktop_window
-  // await DesktopWindow.setFullScreen(true);
-  // if (Platform.isMacOS || Platform.isWindows || Platform.isLinux) {
-  //   await DesktopWindow.setWindowSize(const Size(700, 500));
-  //   // await DesktopWindow.setMinWindowSize(const Size(300, 200));
-  //   // await DesktopWindow.setMaxWindowSize(const Size(1200, 800));
-  // }
+    // 1、desktop_window
+    // await DesktopWindow.setFullScreen(true);
+    // if (Platform.isMacOS || Platform.isWindows || Platform.isLinux) {
+    //   await DesktopWindow.setWindowSize(const Size(700, 500));
+    //   // await DesktopWindow.setMinWindowSize(const Size(300, 200));
+    //   // await DesktopWindow.setMaxWindowSize(const Size(1200, 800));
+    // }
 
 // 2、window_manager
-  await windowManager.ensureInitialized();
-  WindowOptions windowOptions = WindowOptions(
-      size: Size(width, height),
-      center: true,
-      skipTaskbar: true,
-      fullScreen: false,
-      maximumSize: const Size(1000, 800),
-      minimumSize: const Size(300, 400));
-  windowManager.waitUntilReadyToShow(windowOptions, () async {
-    await windowManager.show();
-    await windowManager.focus();
-  });
+    await windowManager.ensureInitialized();
+    WindowOptions windowOptions = WindowOptions(
+        size: Size(width, height),
+        center: true,
+        skipTaskbar: true,
+        fullScreen: false,
+        maximumSize: const Size(1000, 800),
+        minimumSize: const Size(300, 400));
+    windowManager.waitUntilReadyToShow(windowOptions, () async {
+      await windowManager.show();
+      await windowManager.focus();
+    });
+  }
 }
 
 class MyApp extends StatelessWidget {
@@ -81,9 +80,10 @@ class MyApp extends StatelessWidget {
               position: PopupMenuPosition.under,
               itemBuilder: (context) => [
                 PopupMenuItem(
-                    value: 'message',
+                    enabled: Platform.isMacOS || Platform.isWindows,
+                    value: 'zoom_window',
                     child: Row(
-                      children: [Icon(Icons.message), Text("消息")],
+                      children: [Icon(Icons.message), Text("窗口")],
                     )),
                 PopupMenuItem(
                   value: 'pkginfo',
@@ -105,8 +105,8 @@ class MyApp extends StatelessWidget {
                       },
                     ));
                     break;
-                  case 'message':
-                    print('message...');
+                  case 'zoom_window':
+                    print('zoom_window...');
                     changeScreenSize(300, 450);
                     // () async {
                     //   WidgetsFlutterBinding.ensureInitialized();

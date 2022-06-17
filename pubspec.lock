@@ -47,7 +47,6 @@ packages:
     dependency: "direct main"
     description:
       name: cupertino_icons
-      
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.0.5"
