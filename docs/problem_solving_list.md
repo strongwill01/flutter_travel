@@ -1,3 +1,17 @@
+### 11、[windows]Flutter: Building with plugins requires symlink support
+```
+Building with plugins requires symlink support.
+
+Please enable Developer Mode in your system settings. Run
+  start ms-settings:developers
+to open settings.
+exit code 1
+```
+[solution] 
+
+1、open settings.(window or command `start ms-settings:developers`)
+2、Click on `Privacy & Security` and after, click on for developers option.
+3、On for developers settings, activate the Developer mode option (Install apps from any source...).
 
 
 ### 10、新增package(desktop_webview_window)，运行时报错：CocoaPods could not find compatible versions for pod "desktop_webview_window":
