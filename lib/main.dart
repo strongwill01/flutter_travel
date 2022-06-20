@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_travel/travel_list/login.dart';
+import 'package:travel_demo/home_demo.dart';
+import 'package:travel_demo/travel_demo.dart';
 import 'package:window_manager/window_manager.dart';
 import 'travel_list/pkg_info.dart';
 
@@ -129,7 +131,7 @@ class MyApp extends StatelessWidget {
         //     webview.launch("https://www.baidu.com");
         //   },
         // ),
-        body: Container(),
+        body: HomeDemo(),
       ),
     );
   }
