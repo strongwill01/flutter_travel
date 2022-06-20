@@ -198,7 +198,7 @@ Finished with error: Gradle task assembleDebug failed with exit code 1
 
 
 ### 5、`Waiting for another flutter command to release the startup lock...`
-想看下当前版本，执行命令时提示了以上信息，what?why?how?  
+想看下当前版本，执行命令(any)时提示了以上信息，what?why?how?  
 G了下，大概了解了原因，是因为项目异常关闭、IDE(如android studio等)异常终止(如任务管理器或活动监视器强制关闭)，然后下次运行时候会提示一个⚠️警告。  
 
 有两种办法解决该问题，就是将`lockfile`文件删除，该文件为0字节，当执行一些命令时还是会出现一个0字节的`lockfile`文件。  
@@ -206,7 +206,9 @@ G了下，大概了解了原因，是因为项目异常关闭、IDE(如android s
 ② executive command `rm ./flutter/bin/cache/lockfile`.  
 
 **maybe?**
-`killall -9 dart` or  `flutter clean`
+ `flutter clean`  
+LINUX: `killall -9 dart`
+WINDOW: `taskkill /F /IM dart.exe`
 
 ### 4、保存时执行hot reload
 <img src="./imgs/problem_solving_list/perform_hot_reload_on_save.png" width="600" height="300">
