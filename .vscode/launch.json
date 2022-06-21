@@ -4,6 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
         {
             "name": "flutter_travel",
             "request": "launch",
@@ -15,6 +16,7 @@
             // "deviceId": "chrome"
             "deviceId": "macos"
             // "deviceId": "window"
+            // "program": "/"
         },
         {
             "name": "flutter_travel (profile mode)",

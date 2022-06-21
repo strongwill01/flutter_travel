@@ -143,7 +143,7 @@ packages:
     source: hosted
     version: "1.0.0"
   package_info_plus:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: package_info_plus
       url: "https://pub.flutter-io.cn"
@@ -288,7 +288,7 @@ packages:
     source: hosted
     version: "2.6.1"
   window_manager:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: window_manager
       url: "https://pub.flutter-io.cn"
