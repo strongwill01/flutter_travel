@@ -34,6 +34,9 @@ dependencies:
 
   travel_demo:
     path: ./travel_demo
+  travel_macos_ui:
+    path: ./travel_macos_ui
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -41,6 +44,8 @@ dependencies:
   # path_provider: ^
   # https://pub.dev/packages/provider
   provider: ^6.0.3
+  desktop_webview_window: ^0.1.6
+  path_provider: ^2.0.7
 
 
 dev_dependencies:
