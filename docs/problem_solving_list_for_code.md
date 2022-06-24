@@ -10,7 +10,7 @@
 * `/Runner/DebugProfile.entitlements`
 ```
 <key>com.apple.security.network.client</key>
-	<true/>
+<true/>
 ```
 
 * `/Runner/Info.plist`
@@ -19,6 +19,6 @@
 	<dict>
 		<key>NSAllowsArbitraryLoadsInWebContent</key>
 		<true/>
-	</dict>
+</dict>
 ```
 
