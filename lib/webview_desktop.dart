@@ -27,7 +27,7 @@ class _MyAppState extends State<MyApp> {
   );
 
   bool? _webviewAvailable;
-
+  late Webview webview;
   @override
   void initState() {
     super.initState();
@@ -36,6 +36,16 @@ class _MyAppState extends State<MyApp> {
         _webviewAvailable = value;
       });
     });
+
+    // webview = await WebviewWindow.create(
+    //   configuration: CreateConfiguration(
+    //     windowHeight: 640,
+    //     windowWidth: 360,
+    //     title: "ExampleTestWindow",
+    //     titleBarTopPadding: Platform.isMacOS ? 20 : 0,
+    //     userDataFolderWindows: await _getWebViewPath(),
+    //   ),
+    // );
   }
 
   @override
@@ -54,15 +64,15 @@ class _MyAppState extends State<MyApp> {
           actions: [
             IconButton(
               onPressed: () async {
-                final webview = await WebviewWindow.create(
-                  configuration: CreateConfiguration(
-                    windowHeight: 640,
-                    windowWidth: 360,
-                    title: "ExampleTestWindow",
-                    titleBarTopPadding: Platform.isMacOS ? 20 : 0,
-                    userDataFolderWindows: await _getWebViewPath(),
-                  ),
-                );
+                // final webview = await WebviewWindow.create(
+                //   configuration: CreateConfiguration(
+                //     windowHeight: 640,
+                //     windowWidth: 360,
+                //     title: "ExampleTestWindow",
+                //     titleBarTopPadding: Platform.isMacOS ? 20 : 0,
+                //     userDataFolderWindows: await _getWebViewPath(),
+                //   ),
+                // );
                 webview
                   ..registerJavaScriptMessageHandler("test", (name, body) {
                     debugPrint('on javaScipt message: $name $body');
@@ -96,32 +106,42 @@ class _MyAppState extends State<MyApp> {
             )
           ],
         ),
-        body: Center(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                TextField(controller: _controller),
-                const SizedBox(height: 16),
-                TextButton(
-                  onPressed: _webviewAvailable != true ? null : _onTap,
-                  child: const Text('Open'),
-                ),
-                const SizedBox(height: 20),
-                TextButton(
-                  onPressed: () async {
-                    await WebviewWindow.clearAll(
-                      userDataFolderWindows: await _getWebViewPath(),
-                    );
-                    debugPrint('clear complete');
-                  },
-                  child: const Text('Clear all'),
-                )
-              ],
+        body: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: GestureDetector(
+                child: Text("open"),
+              ),
             ),
-          ),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    TextField(controller: _controller),
+                    const SizedBox(height: 16),
+                    TextButton(
+                      onPressed: _webviewAvailable != true ? null : _onTap,
+                      child: const Text('Open'),
+                    ),
+                    const SizedBox(height: 20),
+                    TextButton(
+                      onPressed: () async {
+                        await WebviewWindow.clearAll(
+                          userDataFolderWindows: await _getWebViewPath(),
+                        );
+                        debugPrint('clear complete');
+                      },
+                      child: const Text('Clear all'),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -134,21 +154,21 @@ class _MyAppState extends State<MyApp> {
         titleBarTopPadding: Platform.isMacOS ? 20 : 0,
       ),
     );
-    webview
-      ..setBrightness(Brightness.light)
-      // ..setApplicationNameForUserAgent("WebviewExample/1.0.0")
-      ..launch(_controller.text)
-      ..addOnUrlRequestCallback((url) {
-        debugPrint('url: $url');
-        final uri = Uri.parse(url);
-        if (uri.path == '/login_success') {
-          debugPrint('login success. token: ${uri.queryParameters['token']}');
-          webview.close();
-        }
-      })
-      ..onClose.whenComplete(() {
-        debugPrint("on close");
-      });
+    // webview
+    //   ..setBrightness(Brightness.light)
+    //   // ..setApplicationNameForUserAgent("WebviewExample/1.0.0")
+    //   // ..launch(_controller.text)
+    //   ..addOnUrlRequestCallback((url) {
+    //     debugPrint('url: $url');
+    //     final uri = Uri.parse(url);
+    //     if (uri.path == '/login_success') {
+    //       debugPrint('login success. token: ${uri.queryParameters['token']}');
+    //       webview.close();
+    //     }
+    //   })
+    //   ..onClose.whenComplete(() {
+    //     debugPrint("on close");
+    //   });
     await Future.delayed(const Duration(seconds: 5));
     // for (final javaScript in _javaScriptToEval) {
     //   try {
