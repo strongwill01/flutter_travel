@@ -2,10 +2,10 @@ macOS系统下抓包～
 
 ## 环境
 ### macOS Monterey
-版本: 12.4
-MacBook Pro (13-inch, 2020, Four Thunderbolt 3 ports)
-处理器: 2 GHz 四核Intel Core i5
-内存: 16 GB 3733 MHz LPDDR4X
+版本: 12.4  
+MacBook Pro (13-inch, 2020, Four Thunderbolt 3 ports).  
+处理器: 2 GHz 四核Intel Core i5.  
+内存: 16 GB 3733 MHz LPDDR4X.  
 
 ### Charles
 V4.5.5
@@ -33,7 +33,7 @@ v3.7
 
 
 ### 1、安装
-分别安装`Charles`和`Proxifier`.
+分别安装`Charles`和`Proxifier`.  
 安装步骤...此处省略一千字......
 
 ### 2、配置Charles
@@ -59,8 +59,15 @@ v3.7
 <img src="./imgs/capture_package/3.jpg" width=40% style="zoom:60%;" />
 </div>
 
+#### 2.4 安装证书并信任
+`help->SSL Proxying-->Install Charles Root Certificate`
+<div align="center">
+<img src="./imgs/capture_package/11.jpg" width=40% style="zoom:60%;" />
+</div>
 
-
+<div align="center">
+<img src="./imgs/capture_package/10.jpg" width=40% style="zoom:60%;" />
+</div>
 
 ### 3、配置proxifier
 #### 3.1 添加代理
@@ -85,13 +92,12 @@ v3.7
 <div align="center">
 <img src="./imgs/capture_package/9.jpg" width=40% style="zoom:60%;" />
 </div>
-
-至此，基本的配置完成后，就可以用charles进行抓包了～
+至此，基本的配置完成后，就可以用charles进行抓包了～  
 赶紧搬砖去……时间从手指刷啦啦的划过......
 
 ## 疑问
 ### 1、连了代理后抓到的全部显示`unknown`
-排查下这两个设置是否同步: 主要看#3.1和#3.3, 我和同事基本卡在这里耽误了点时间。
+排查下这两个设置是否同步: 主要看#3.1和#3.3, 过程中主要在这里耽误了点时间。
 
 
 
