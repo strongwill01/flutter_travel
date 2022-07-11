@@ -165,3 +165,4 @@ Map<String, dynamic> _$DemoTeachingActivitysToJson(
 ```
 
 以上就是json序列化的应用, 也用到了库的拆分概念。这个可以应用到项目中。从接口获取数据后，通过`T.fromjson(json):<T>`来将数据转换成对象后方便使用。
+
