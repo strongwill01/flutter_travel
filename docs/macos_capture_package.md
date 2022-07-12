@@ -88,14 +88,18 @@ v3.7
 <img src="./imgs/capture_package/8.jpg" width=40% style="zoom:60%;" />
 </div>
 
-配置好后在系统/网络下会看到已连接和运行中的状态
+### 4、配置完毕后
+#### 4.1 配置好后在系统/网络下会看到已连接和运行中的状态
 <div align="center">
 <img src="./imgs/capture_package/9.jpg" width=40% style="zoom:60%;" />
 </div>
 至此，基本的配置完成后，就可以用charles进行抓包了～  
 赶紧搬砖去……时间从手指刷啦啦的划过......
 
-## 疑问
+#### 4.2 重启
+配置完成后，重启`Proxifier`, 最好也重启下`Charles`.
+
+## 5、疑问
 ### 1、连了代理后抓到的全部显示`unknown`
 排查下这两个设置是否同步: 主要看#3.1和#3.3, 过程中主要在这里耽误了点时间。
 
