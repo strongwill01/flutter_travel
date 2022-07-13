@@ -1,0 +1,136 @@
+{
+  "main": {
+    "id": "77464c553d173194",
+    "type": "split",
+    "children": [
+      {
+        "id": "4acf26f12a679aca",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "macos_capture_package.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "409cd0525990b54c",
+    "type": "split",
+    "children": [
+      {
+        "id": "8849634ea02abe78",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8dd006c8f57c1145",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "aecbb4149a09a838",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a42e1016d39e056a",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0e9ac07406a7c42c",
+    "type": "split",
+    "children": [
+      {
+        "id": "42c55a1e9d9ffc72",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "31f6b000d180fde1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "macos_capture_package.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8e7d0144ad52873f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "macos_capture_package.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "07266e35db772a37",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "56c5765894f3151d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "macos_capture_package.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "4acf26f12a679aca",
+  "lastOpenFiles": [
+    "other/json_serializable.md",
+    "README.md"
+  ]
+}
