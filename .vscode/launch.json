@@ -2,21 +2,25 @@
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    // see https://dartcode.org/docs/launch-configuration/
     "version": "0.2.0",
     "configurations": [
-        
         {
             "name": "flutter_travel",
             "request": "launch",
             "type": "dart",
+            "flutterMode": "debug",
             // "flutterMode": "profile",
             // "flutterPlatform": "android-arm64",
             // "deviceId": "MP528DL100012" // 学习机
             // "deviceId": "7HX5T19A05002680" // mobile
-            // "deviceId": "chrome"
-            "deviceId": "macos"
-            // "deviceId": "window"
-            // "program": "/"
+            // "deviceId": "chrome",
+            // "deviceId": "macos",
+            // "deviceId": "window",
+            "deviceId": "EMT264E11Q14G00021",
+            // "deviceId": "37F612E2-0CBF-405F-ACA2-4F25BAB4AB37",
+            // "program": "/",
+            "program": "lib/webview_flutter_demo/webview_flutter_main.dart",
         },
         {
             "name": "flutter_travel (profile mode)",

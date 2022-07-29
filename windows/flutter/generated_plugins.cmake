@@ -5,6 +5,7 @@
 list(APPEND FLUTTER_PLUGIN_LIST
   desktop_webview_window
   screen_retriever
+  webview_cef
   window_manager
 )
 
