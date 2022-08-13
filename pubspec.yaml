@@ -52,7 +52,10 @@ dependencies:
   # dart_vlc: ^0.2.1
   webview_cef: ^0.0.3
   webview_flutter: ^3.0.4
-
+  # webview_flutter: ^2.1.0
+  # webview_javascript_bridge: ^1.0.2
+  # flutter_jsbridge_plugin: ^0.0.5
+  flutter_inappwebview: ^5.4.3+7
 
 dev_dependencies:
   flutter_test:

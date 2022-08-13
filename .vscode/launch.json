@@ -15,10 +15,11 @@
             // "deviceId": "MP528DL100012" // 学习机
             // "deviceId": "7HX5T19A05002680" // mobile
             // "deviceId": "chrome",
-            // "deviceId": "macos",
+            "deviceId": "macos",
             // "deviceId": "window",
-            "deviceId": "EMT264E11Q14G00021",
+            // "deviceId": "EMT264E11Q14G00021",
             // "deviceId": "37F612E2-0CBF-405F-ACA2-4F25BAB4AB37",
+            // "deviceId": "6302B4BB-CAD9-4C12-BF5B-D5ED657607A4",
             // "program": "/",
             "program": "lib/webview_flutter_demo/webview_flutter_main.dart",
         },
