@@ -21,7 +21,9 @@
             // "deviceId": "37F612E2-0CBF-405F-ACA2-4F25BAB4AB37",
             // "deviceId": "6302B4BB-CAD9-4C12-BF5B-D5ED657607A4",
             // "program": "/",
-            "program": "lib/webview_flutter_demo/webview_flutter_main.dart",
+            // "program": "lib/webview_flutter_demo/webview_flutter_main.dart",
+            // "program": "lib/desktop_multi_window/desktop_multi_window.dart",
+            "program": "lib/websocket/socket_io_client_demo.dart"
         },
         {
             "name": "flutter_travel (profile mode)",

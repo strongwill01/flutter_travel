@@ -1,3 +1,20 @@
+
+### 13、vscode调试问题
+visual studio run debug的调试还有问题，命令的可以了。  
+[vscode有几次出了问题，不能运行不能调试，重启之后好了，目前还未找原因]
+
+### 12、flutter Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. CORS
+
+[solution] 
+
+* 1. Go to `flutter\bin\cache` and remove a file `flutter_tools.stamp`.
+* 2. Go to `flutter\packages\flutter_tools\lib\src\web` and open the file `chrome.dart`.
+* 3. Find `--disable-extensions`
+* 4. Add `--disable-web-security`
+* 5. Restart app.
+
+Server support ,omit～～～
+
 ### 11、[windows]Flutter: Building with plugins requires symlink support
 ```
 Building with plugins requires symlink support.
