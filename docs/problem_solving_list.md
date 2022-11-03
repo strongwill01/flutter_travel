@@ -1,4 +1,42 @@
 
+
+### 14、You don't have an extension for debugging YAML. Should we find a YAML extension in the Marketplace?
+如果运行时提示这个信息是因为你当前处于`yaml`文件中或者没有使用`launch.json`对默认启动入口进行配置。切换到其他`.dart`文件中或`main.dart`运行即可。
+为了方便，可在`RUN AND DEBUG`模式下，创建一个`launch.json`配置文件,
+
+<img src="./imgs/problem_solving_list/launch_json.png" width="450" height="290">
+
+`launch.json`内容如下:
+增加了启动调试器时运行的可执行文件或文件, `"program": "./lib/main.dart"`
+```
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "npc",
+            "request": "launch",
+            "type": "dart",
+            "program": "./lib/main.dart"
+        },
+        {
+            "name": "npc (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "npc (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
+```
+
 ### 13、vscode调试问题
 visual studio run debug的调试还有问题，命令的可以了。  
 [vscode有几次出了问题，不能运行不能调试，重启之后好了，目前还未找原因]
